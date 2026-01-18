@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Living Waters Bible Church - Audit Log</title>
+</head>
+<body>
+
+<h1>Living Waters Bible Church</h1>
+<h2>Audit Log</h2>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Requisition ID</th>
+        <th>Action</th>
+        <th>Performed By</th>
+        <th>Role</th>
+        <th>Date & Time</th>
+    </tr>
+
+    {% for row in rows %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="/admin">Back to Dashboard</a> |
+<a href="/logout">Logout</a>
+
+</body>
+</html>
